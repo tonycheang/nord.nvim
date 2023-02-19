@@ -19,17 +19,17 @@ end
 theme.loadSyntax = function()
 	-- Syntax highlight groups
 	return {
-		Type = { fg = nord.nord9_gui }, -- int, long, char, etc.
+		Type = { fg = nord.nord13_gui }, -- int, long, char, etc.
 		StorageClass = { fg = nord.nord9_gui }, -- static, register, volatile, etc.
 		Structure = { fg = nord.nord9_gui }, -- struct, union, enum, etc.
 		Constant = { fg = nord.nord4_gui }, -- any constant
 		Character = { fg = nord.nord14_gui }, -- any character constant: 'c', '\n'
-		Number = { fg = nord.nord15_gui }, -- a number constant: 5
-		Boolean = { fg = nord.nord9_gui }, -- a boolean constant: TRUE, false
-		Float = { fg = nord.nord15_gui }, -- a floating point constant: 2.3e10
+		Number = { fg = nord.nord7_gui }, -- a number constant: 5
+		Boolean = { fg = nord.nord15_gui }, -- a boolean constant: TRUE, false
+		Float = { fg = nord.nord7_gui }, -- a floating point constant: 2.3e10
 		Statement = { fg = nord.nord9_gui }, -- any statement
 		Label = { fg = nord.nord9_gui }, -- case, default, etc.
-		Operator = { fg = nord.nord9_gui }, -- sizeof", "+", "*", etc.
+		Operator = { fg = nord.nord12_gui }, -- sizeof", "+", "*", etc.
 		Exception = { fg = nord.nord9_gui }, -- try, catch, throw
 		PreProc = { fg = nord.nord9_gui }, -- generic Preprocessor
 		Include = { fg = nord.nord9_gui }, -- preprocessor #include
@@ -37,11 +37,11 @@ theme.loadSyntax = function()
 		Macro = { fg = nord.nord9_gui }, -- same as Define
 		Typedef = { fg = nord.nord9_gui }, -- A typedef
 		PreCondit = { fg = nord.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
-		Special = { fg = nord.nord4_gui }, -- any special symbol
+		Special = { fg = nord.nord13_gui }, -- any special symbol
 		SpecialChar = { fg = nord.nord13_gui }, -- special character in a constant
 		Tag = { fg = nord.nord4_gui }, -- you can use CTRL-] on this
 		Delimiter = { fg = nord.nord6_gui }, -- character that needs attention like , or .
-		SpecialComment = { fg = nord.nord8_gui }, -- special things inside a comment
+		SpecialComment = { fg = nord.nord13_gui }, -- special things inside a comment
 		Debug = { fg = nord.nord11_gui }, -- debugging statements
 		Underlined = { fg = nord.nord14_gui, bg = nord.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = nord.nord1_gui }, -- left blank, hidden
@@ -63,7 +63,7 @@ theme.loadSyntax = function()
 		Comment = { fg = nord.nord3_gui_bright, style = italic }, -- italic comments
 		Conditional = { fg = nord.nord9_gui, style = italic }, -- italic if, then, else, endif, switch, etc.
 		Function = { fg = nord.nord8_gui, style = italic }, -- italic funtion names
-		Identifier = { fg = nord.nord9_gui, style = italic }, -- any variable name
+		Identifier = { fg = nord.nord6_gui, style = italic }, -- any variable name
 		Keyword = { fg = nord.nord9_gui, style = italic }, -- italic for, do, while, etc.
 		Repeat = { fg = nord.nord9_gui, style = italic }, -- italic any other keyword
 		String = { fg = nord.nord14_gui, style = italic }, -- any string
@@ -242,22 +242,22 @@ theme.loadTreeSitter = function()
 	-- TreeSitter highlight groups
 
 	local treesitter = {
-		TSConstructor = { fg = nord.nord9_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-		TSConstant = { fg = nord.nord13_gui }, -- For constants
-		TSFloat = { fg = nord.nord15_gui }, -- For floats
-		TSNumber = { fg = nord.nord15_gui }, -- For all number
-		TSAttribute = { fg = nord.nord15_gui }, -- (unstable) TODO: docs
+		TSConstructor = { fg = nord.nord13_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+		TSConstant = { fg = nord.nord4_gui }, -- For constants
+		TSFloat = { fg = nord.nord7_gui }, -- For floats
+		TSNumber = { fg = nord.nord7_gui }, -- For all number
+		TSAttribute = { fg = nord.nord8_gui }, -- (unstable) TODO: docs
 		TSError = { fg = nord.nord11_gui }, -- For syntax/parser errors.
-		TSException = { fg = nord.nord15_gui }, -- For exception related keywords.
+		TSException = { fg = nord.nord9_gui }, -- For exception related keywords.
 		TSFuncMacro = { fg = nord.nord7_gui }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
 		TSInclude = { fg = nord.nord9_gui }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
 		TSLabel = { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
-		TSOperator = { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
+		TSOperator = { fg = nord.nord12_gui }, -- For any operator: `+`, but also `->` and `*` in C.
 		TSParameter = { fg = nord.nord10_gui }, -- For parameters of a function.
 		TSParameterReference = { fg = nord.nord10_gui }, -- For references to parameters of a function.
 		TSPunctDelimiter = { fg = nord.nord8_gui }, -- For delimiters ie: `.`
 		TSPunctBracket = { fg = nord.nord8_gui }, -- For brackets and parens.
-		TSPunctSpecial = { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
+		TSPunctSpecial = { fg = nord.nord13_gui }, -- For special punctutation that does not fall in the catagories before.
 		TSSymbol = { fg = nord.nord15_gui }, -- For identifiers referring to symbols or atoms.
 		TSType = { fg = nord.nord9_gui }, -- For types.
 		TSTypeBuiltin = { fg = nord.nord9_gui }, -- For builtin types.
@@ -270,24 +270,24 @@ theme.loadTreeSitter = function()
 		TSLiteral = { fg = nord.nord4_gui }, -- Literal text.
 		TSURI = { fg = nord.nord14_gui }, -- Any URI like a link or email.
 		TSAnnotation = { fg = nord.nord11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-		["@constructor"] = { fg = nord.nord9_gui },
-		["@constant"] = { fg = nord.nord13_gui },
-		["@float"] = { fg = nord.nord15_gui },
-		["@number"] = { fg = nord.nord15_gui },
-		["@attribute"] = { fg = nord.nord15_gui },
+		["@constructor"] = { fg = nord.nord13_gui },
+		["@constant"] = { fg = nord.nord4_gui },
+		["@float"] = { fg = nord.nord7_gui },
+		["@number"] = { fg = nord.nord7_gui },
+		["@attribute"] = { fg = nord.nord8_gui },
 		["@error"] = { fg = nord.nord11_gui },
-		["@exception"] = { fg = nord.nord15_gui },
+		["@exception"] = { fg = nord.nord9_gui },
 		["@funtion.macro"] = { fg = nord.nord7_gui },
 		["@include"] = { fg = nord.nord9_gui },
 		["@label"] = { fg = nord.nord15_gui },
-		["@operator"] = { fg = nord.nord9_gui },
-		["@parameter"] = { fg = nord.nord10_gui },
-		["@punctuation.delimiter"] = { fg = nord.nord8_gui },
-		["@punctuation.bracket"] = { fg = nord.nord8_gui },
-		["@punctuation.special"] = { fg = nord.nord8_gui },
+		["@operator"] = { fg = nord.nord12_gui },
+		["@parameter"] = { fg = nord.nord4_gui },
+		["@punctuation.delimiter"] = { fg = nord.nord4_gui },
+		["@punctuation.bracket"] = { fg = nord.nord4_gui },
+		["@punctuation.special"] = { fg = nord.nord4_gui },
 		["@symbol"] = { fg = nord.nord15_gui },
-		["@type"] = { fg = nord.nord9_gui },
-		["@type.builtin"] = { fg = nord.nord9_gui },
+		["@type"] = { fg = nord.nord13_gui },
+		["@type.builtin"] = { fg = nord.nord13_gui },
 		["@tag"] = { fg = nord.nord4_gui },
 		["@tag.delimiter"] = { fg = nord.nord15_gui },
 		["@text"] = { fg = nord.nord4_gui },
@@ -312,20 +312,20 @@ theme.loadTreeSitter = function()
 		-- @string.special
 	}
 
-	treesitter.TSVariableBuiltin = { fg = nord.nord4_gui, style = bold }
-	treesitter.TSBoolean = { fg = nord.nord9_gui, style = bold }
-	treesitter.TSConstBuiltin = { fg = nord.nord7_gui, style = bold }
-	treesitter.TSConstMacro = { fg = nord.nord7_gui, style = bold }
-	treesitter.TSVariable = { fg = nord.nord4_gui, style = bold }
-	treesitter.TSTitle = { fg = nord.nord10_gui, bg = nord.none, style = bold }
-	treesitter["@variable"] = { fg = nord.nord4_gui, style = bold }
-	treesitter["@variable.builtin"] = { fg = nord.nord4_gui, style = bold }
-	treesitter["@variable.global"] = { fg = nord.nord4_gui, style = bold }
-	treesitter["@boolean"] = { fg = nord.nord9_gui, style = bold }
-	treesitter["@constant.builtin"] = { fg = nord.nord7_gui, style = bold }
-	treesitter["@constant.macro"] = { fg = nord.nord7_gui, style = bold }
-	treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none, style = bold }
-	treesitter["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none, style = bold }
+	treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
+	treesitter.TSBoolean = { fg = nord.nord9_gui }
+	treesitter.TSConstBuiltin = { fg = nord.nord7_gui }
+	treesitter.TSConstMacro = { fg = nord.nord7_gui }
+	treesitter.TSVariable = { fg = nord.nord4_gui }
+	treesitter.TSTitle = { fg = nord.nord10_gui }
+	treesitter["@variable"] = { fg = nord.nord5_gui }
+	treesitter["@variable.builtin"] = { fg = nord.nord5_gui }
+	treesitter["@variable.global"] = { fg = nord.nord5_gui }
+	treesitter["@boolean"] = { fg = nord.nord9_gui }
+	treesitter["@constant.builtin"] = { fg = nord.nord4_gui }
+	treesitter["@constant.macro"] = { fg = nord.nord4_gui }
+	treesitter["@text.title"] = { fg = nord.nord10_gui, bg = nord.none }
+	treesitter["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none }
 	-- Comments
 	treesitter.TSComment = { fg = nord.nord3_gui_bright, style = italic }
 	-- Conditionals
@@ -356,16 +356,16 @@ theme.loadTreeSitter = function()
 	treesitter["@method"] = { fg = nord.nord8_gui, style = italic }
 	treesitter["@function.builtin"] = { fg = nord.nord8_gui, style = italic }
 	treesitter["@namespace"] = { fg = nord.nord4_gui, style = italic }
-	treesitter["@field"] = { fg = nord.nord4_gui, style = italic }
+	treesitter["@field"] = { fg = nord.nord6_gui, style = italic }
 	treesitter["@property"] = { fg = nord.nord10_gui, style = italic }
 	treesitter["@keyword"] = { fg = nord.nord9_gui, style = italic }
-	treesitter["@keyword.function"] = { fg = nord.nord8_gui, style = italic }
-	treesitter["@keyword.return"] = { fg = nord.nord8_gui, style = italic }
-	treesitter["@keyword.operator"] = { fg = nord.nord8_gui, style = italic }
+	treesitter["@keyword.function"] = { fg = nord.nord9_gui, style = italic }
+	treesitter["@keyword.return"] = { fg = nord.nord9_gui, style = italic }
+	treesitter["@keyword.operator"] = { fg = nord.nord12_gui, style = italic }
 	treesitter["@repeat"] = { fg = nord.nord9_gui, style = italic }
 	treesitter["@string"] = { fg = nord.nord14_gui, style = italic }
 	treesitter["@string.regex"] = { fg = nord.nord7_gui, style = italic }
-	treesitter["@string.escape"] = { fg = nord.nord15_gui, style = italic }
+	treesitter["@string.escape"] = { fg = nord.nord13_gui, style = italic }
 	treesitter["@character"] = { fg = nord.nord14_gui, style = italic }
 
 	return treesitter
