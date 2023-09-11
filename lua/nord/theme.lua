@@ -850,6 +850,26 @@ theme.loadPlugins = function()
 		NavicIconsVariable = { fg = nord.nord4_gui, style = bold },
 		NavicText = { fg = nord.nord4_gui },
 		NavicSeparator = { fg = nord.nord4_gui },
+
+    -- Neotest
+    NeotestAdapterName = { fg = nord.nord13_gui },
+    -- NeotestBorder = { fg = nord.nord2_gui },
+    NeotestDir = { fg = nord.nord10_gui },
+    NeotestExpandMarker = { fg = nord.nord3_gui_bright },
+    NeotestFailed = { fg = nord.nord11_gui },
+    NeotestFile = { fg = nord.nord4_gui },
+    NeotestFocused = { fg = nord.nord6_gui, bg = nord.nord9_gui },
+    NeotestIndent = { fg = nord.nord2_gui },
+    -- NeotestMarked = { fg = nord.nord11_gui },
+    NeotestNamespace = { fg = nord.nord13_gui },
+    NeotestPassed = { fg = nord.nord14_gui },
+    NeotestRunning = { fg = nord.nord13_gui },
+    -- NeotestWinSelect = { fg = nord.nord2_gui },
+    -- NeotestSkipped = { fg = nord.nord11_gui },
+    -- NeotestTarget = { fg = nord.nord13_gui },
+    NeotestTest = { fg = nord.nord8_gui },
+    -- NeotestUnknown = { fg = nord.nord11_gui },
+    NeotestWatching = { fg = nord.nord15_gui },
 	}
 	-- Options:
 
